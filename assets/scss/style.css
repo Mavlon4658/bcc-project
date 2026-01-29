@@ -2357,6 +2357,11 @@ main {
 .payment_delivery_head {
   margin-bottom: 80px;
 }
+@media screen and (max-width: 992px) {
+  .payment_delivery_head {
+    margin-bottom: 60px;
+  }
+}
 .payment_delivery_head p {
   margin-top: 60px;
   font-weight: 400;
@@ -2365,31 +2370,37 @@ main {
   color: #1d1d1d;
   max-width: 780px;
 }
-
-.tabs {
-  width: 100%;
+@media screen and (max-width: 992px) {
+  .payment_delivery_head p {
+    font-size: 14px;
+    margin-top: 40px;
+  }
 }
+
 .tabs__nav {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .tabs__btn {
-  padding: 10px 20px;
-  border-radius: 12px;
-  border: 1px solid #d0d0d0;
-  background: transparent;
-  cursor: pointer;
+  font-weight: 500;
+  font-style: Medium;
   font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #112d55;
+  cursor: pointer;
   transition: 0.25s ease;
-}
-.tabs__btn:hover {
-  background: #f3f3f3;
+  height: 50px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  padding: 10px 20px;
 }
 .tabs__btn.is-active {
-  background: #1e293b;
   color: #fff;
-  border-color: #1e293b;
+  background: #112d55;
 }
 .tabs__panel {
   display: none;

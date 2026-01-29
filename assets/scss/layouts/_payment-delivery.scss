@@ -3,6 +3,10 @@
   &_head {
     margin-bottom: 80px;
 
+    @include media(992) {
+      margin-bottom: 60px;
+    }
+
     p {
       margin-top: 60px;
       font-weight: 400;
@@ -10,36 +14,42 @@
       line-height: 160%;
       color: $color-text-black;
       max-width: 780px;
+
+      @include media(992) {
+        font-size: 14px;
+        margin-top: 40px;
+      }
     }
   }
 }
 
 .tabs {
-  width: 100%;
 
   &__nav {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &__btn {
-    padding: 10px 20px;
-    border-radius: 12px;
-    border: 1px solid #d0d0d0;
-    background: transparent;
-    cursor: pointer;
+    font-weight: 500;
+    font-style: Medium;
     font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: $color-main-blue;
+    cursor: pointer;
     transition: 0.25s ease;
-
-    &:hover {
-      background: #f3f3f3;
-    }
+    height: 50px;
+    border-radius: 10px;
+    background: $color-bg-grey;
+    padding: 10px 20px;
 
     &.is-active {
-      background: #1e293b;
-      color: #fff;
-      border-color: #1e293b;
+      color: $color-bg-white-1000;
+      background: $color-main-blue;
     }
   }
 
