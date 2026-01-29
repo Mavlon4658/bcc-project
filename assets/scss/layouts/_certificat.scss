@@ -1,0 +1,17 @@
+.certificat {
+    &-container {
+
+    }
+
+    &-head {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .description {
+        max-width: 780px;
+        width: 100%;
+    }
+}

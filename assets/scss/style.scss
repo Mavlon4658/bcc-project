@@ -184,4 +184,38 @@ main {
     }
 }
 
+.breadgrumb {
+    margin: 40px 0 100px;
+
+    @include media(992) {
+        margin: 20px 0 80px;
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        span {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 8px;
+            color: $color-text-grey;
+        }
+
+        li {
+            flex-shrink: 0;
+            display: flex;
+        }
+
+        a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 8px;
+            color: $color-text-black;
+        }
+    }
+}
+
 @import './layouts/index';

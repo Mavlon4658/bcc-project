@@ -108,6 +108,7 @@ if (accordions.length) {
     });
 }
 
+const headerCatalogWrap = document.querySelector('.header-catalog__wrap');
 const headerCatalogOpenBtn = document.querySelector('.header-ctalog__open');
 const headerCatalog = document.querySelector('.header-catalog');
 const headerCatalogBtns = document.querySelectorAll('.header-catalog__link');
@@ -166,9 +167,12 @@ if (search) {
 }
 
 window.addEventListener('click', function (event) {
-    if (searchBtn && !searchBtn.contains(event.target)) {}
     if (search && !search.contains(event.target) && !searchBtn.contains(event.target)) {
         search.classList.remove('active');
+    }
+
+    if (headerCatalogWrap && !headerCatalogWrap.contains(event.target)) {
+        headerCatalog.classList.remove('active');
     }
 })
 
