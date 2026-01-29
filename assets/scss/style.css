@@ -2354,6 +2354,61 @@ main {
   width: 100%;
 }
 
+.payment_delivery_head {
+  margin-bottom: 80px;
+}
+.payment_delivery_head p {
+  margin-top: 60px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #1d1d1d;
+  max-width: 780px;
+}
+
+.tabs {
+  width: 100%;
+}
+.tabs__nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tabs__btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid #d0d0d0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+.tabs__btn:hover {
+  background: #f3f3f3;
+}
+.tabs__btn.is-active {
+  background: #1e293b;
+  color: #fff;
+  border-color: #1e293b;
+}
+.tabs__panel {
+  display: none;
+  animation: fade 0.25s ease;
+}
+.tabs__panel.is-active {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .contact-us {
   padding: 100px 0;
 }
