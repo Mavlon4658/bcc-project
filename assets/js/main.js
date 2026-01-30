@@ -92,7 +92,7 @@ if (accordions.length) {
             acc.forEach(data => {
                 const btn = data.querySelector('.accordion-btn');
                 const bodyWrap = data.querySelector('.accordion-body__wrap');
-            
+
                 btn.addEventListener('click', () => {
                     bodyWrap.style.maxHeight = bodyWrap.style.maxHeight ? null : bodyWrap.scrollHeight + 'px';
                     data.classList.toggle('active');
@@ -241,3 +241,27 @@ if (modal) {
         bodyVisible();
     }
 }
+
+// tabs
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-tabs]").forEach((tabs) => {
+        const buttons = tabs.querySelectorAll(".tabs__btn");
+        const panels = tabs.querySelectorAll(".tabs__panel");
+
+        if (!buttons.length || !panels.length) return;
+
+        buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const targetId = btn.dataset.tab;
+            if (!targetId) return;
+
+            buttons.forEach((b) => b.classList.remove("is-active"));
+            panels.forEach((p) => p.classList.remove("is-active"));
+
+            btn.classList.add("is-active");
+            tabs.querySelector(`#${targetId}`)?.classList.add("is-active");
+        });
+        });
+    });
+});
+// tabs
