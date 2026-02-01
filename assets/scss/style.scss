@@ -197,7 +197,7 @@ main {
         flex-wrap: wrap;
         gap: 10px;
 
-        span {
+        a {
             font-weight: 400;
             font-size: 12px;
             line-height: 8px;
@@ -209,12 +209,50 @@ main {
             display: flex;
         }
 
-        a {
+        span {
             font-weight: 400;
             font-size: 12px;
             line-height: 8px;
             color: $color-text-black;
         }
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &-btn {
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: $color-main-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    span, a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        color: $color-text-grey;
+    }
+
+    .active {
+        font-weight: 600;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $color-main-blue;
     }
 }
 
