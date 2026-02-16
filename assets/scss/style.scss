@@ -256,4 +256,105 @@ main {
     }
 }
 
+
+.main-select {
+    position: relative;
+
+    &__btn {
+        width: 130px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: $color-main-blue;
+        padding: 0 20px;
+        border: 0.50px solid $color-main-blue;
+        border-radius: 10px;
+        text-align: left;
+
+        @include media(800) {
+            width: 102px;
+            height: 30px;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+            
+        span {
+            text-align: left !important;
+            width: auto !important;
+            padding: 0 !important;
+        }
+
+        input {
+            display: none !important;
+        }
+
+        svg {
+            flex-shrink: 0;
+            transition: .2s ease-in-out all;
+        }
+    }
+
+    &__list {
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05), 2px 0 15px 0 rgba(0, 0, 0, 0.05);
+        background: $color-bg-grey;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 2;
+        width: 130px;
+        bottom: -5px;
+        transform: translateY(100%);
+
+        button {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 160%;
+            text-align: center;
+            color: $color-text-black;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            height: 40px;
+            border-radius: 10px;
+            transition: .2s ease-in-out all;
+            text-align: left;
+
+            @include media(800) {
+                height: 30px;
+                width: 102px;
+                padding: 0 10px;
+                border-radius: 5px;
+            }
+            
+            span {
+                text-align: left !important;
+                width: auto !important;
+                padding: 0 !important;
+            }
+            
+            &.selected, &:hover {
+                background: $color-main-blue;
+                color: $color-bg-white-1000;
+            }
+        }
+    }
+
+    &.active {
+        .main-select {
+            &__btn svg {
+                transform: rotateZ(180deg)
+            }
+
+            &__list {
+                display: flex;
+            }
+        }
+    }
+}
+
 @import './layouts/index';

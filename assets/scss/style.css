@@ -306,6 +306,94 @@ main {
   color: #112d55;
 }
 
+.main-select {
+  position: relative;
+}
+.main-select__btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #112d55;
+  padding: 0 20px;
+  border: 0.5px solid #112d55;
+  border-radius: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 800px) {
+  .main-select__btn {
+    width: 102px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+}
+.main-select__btn span {
+  text-align: left !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+.main-select__btn input {
+  display: none !important;
+}
+.main-select__btn svg {
+  flex-shrink: 0;
+  transition: 0.2s ease-in-out all;
+}
+.main-select__list {
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05), 2px 0 15px 0 rgba(0, 0, 0, 0.05);
+  background: #f5f5f5;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  width: 130px;
+  bottom: -5px;
+  transform: translateY(100%);
+}
+.main-select__list button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  color: #1d1d1d;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out all;
+  text-align: left;
+}
+@media screen and (max-width: 800px) {
+  .main-select__list button {
+    height: 30px;
+    width: 102px;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+}
+.main-select__list button span {
+  text-align: left !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+.main-select__list button.selected, .main-select__list button:hover {
+  background: #112d55;
+  color: #fff;
+}
+.main-select.active .main-select__btn svg {
+  transform: rotateZ(180deg);
+}
+.main-select.active .main-select__list {
+  display: flex;
+}
+
 .header {
   padding: 20px 0;
   position: fixed;
